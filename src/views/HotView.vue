@@ -1,27 +1,27 @@
 <template>
-  <div class="stories-view" append="tree">
-    <app-header></app-header>
     <list class="story-list" @loadmore="loadMoreStories" loadmoreoffset="50">
-      <cell class="story-cell" v-for="story in stories" append="tree">
-        <story :story="story"></story>
-      </cell>
+        <cell append="tree">
+            <banner></banner>
+        </cell>
+        <cell class="story-cell" v-for="story in stories" append="tree">
+            <story :story="story"></story>
+        </cell>
+        <cell class="loading" v-if="loading">
+            <text class="loading-text">loading ...</text>
+        </cell>
     </list>
-    <div class="loading" v-if="loading">
-      <text class="loading-text">loading ...</text>
-    </div>
-  </div>
 </template>
 
 <script>
-  import AppHeader from '../components/app-header.vue'
   import Story from '../components/story.vue'
+  import Banner from '../components/banner.vue'
 
   export default {
-    components: { AppHeader, Story },
+    components: { Story, Banner },
     props: {
       type: {
         type: String,
-        required: true,
+        required: false,
         default: 'top'
       }
     },
@@ -55,15 +55,14 @@
     },
 
     created () {
-      this.fetchListData()
+      if (this.$store.getters.activeItems.length === 0) {
+        this.fetchListData()
+      }
     }
   }
 </script>
 
 <style scoped>
-  .stories-view {
-    height: 100%;
-  }
   .story-cell {
     margin-bottom: 3px;
     border-bottom-width: 2px;
