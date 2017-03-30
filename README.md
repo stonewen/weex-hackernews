@@ -2,7 +2,7 @@
 
 [中文版说明文档](./README.zh.md)
 
-A mobile app for [Hacker News](https://news.ycombinator.com/), which is powered by Weex and Vue.
+A mobile app for [Hacker News](https://news.ycombinator.com/) with banner, which is powered by Weex and Vue.
 
 ## Compile
 

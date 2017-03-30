@@ -1,6 +1,6 @@
 # Hacker News App
 
-首个使用 Weex 和 Vue 开发的 Hacker News 原生应用。
+首个使用 Weex 和 Vue 开发的原生应用。
 
 ## 编译项目文件
 
