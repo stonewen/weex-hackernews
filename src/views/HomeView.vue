@@ -12,7 +12,4 @@
 </script>
 
 <style scoped>
-  .stories-view {
-    height: 100%;
-  }
 </style>

@@ -69,8 +69,6 @@
     font-size: 32px;
     line-height: 44px;
     padding-bottom: 15px;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #52ca80;
+    border-bottom: 5px solid #52ca80;
   }
 </style>
